@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"  
+	id="cordova-plugin-uninstall-other-app"  
+	version="0.0.1">  
+	<name>UninstallOtherAppPlugin</name>  
+	<description>UninstallOtherAppPlugin Description</description>  
+	<author>fanrt</author>  
+	<license>Apache 2.0 License</license>  
+	<engines>  
+		<engine name="cordova" version=">=3.0.0" />  
+	</engines>  
+	<js-module src="www/uninstallOtherApp.js" name="uninstallOtherApp">  
+		<clobbers target="cordova.UninstallOtherApp" />  
+	</js-module>  
+	<platform name="android">  
+		<source-file src="src/android/UninstallOtherAppPlugin.java" target-dir="src/com/fanrt/plugin" />  
+		<config-file target="res/xml/config.xml" parent="/*">  
+			<feature name="UninstallOtherAppPlugin">  
+				<param name="android-package" value="com.fanrt.plugin.UninstallOtherAppPlugin"/>  
+			</feature>  
+		</config-file>  
+	</platform>  
+</plugin>  
